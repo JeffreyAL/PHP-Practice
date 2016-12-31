@@ -26,12 +26,12 @@
 
 
       <form class="form-horizontal" method="post" role="form">
-
+        <?php include 'inc/function.php'; ?>
         <!-- Name -->
         <div class="form-group">
           <label class="control-label col-sm-2" for="name">Name:</label>
           <div class="col-sm-4">
-            <input type="name" class="form-control" id="name" placeholder="Enter name">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Enter name">
           </div>
         </div>
 
@@ -39,10 +39,11 @@
         <div class="form-group">
           <label class="control-label col-sm-2" for="email">Email:</label>
           <div class="col-sm-4">
-            <input type="email" class="form-control" id="email" placeholder="Enter email">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
           </div>
         </div>
 
+        <!-- Text Area -->
         <div class="form-group">
           <label class="control-label col-sm-2" for="comment">Message:</label>
           <div class="col-sm-4">
@@ -50,16 +51,13 @@
           </div>
         </div>
 
+        <!-- Button -->
         <div class="form-group">
           <label class="control-label col-sm-2" for="comment"></label>
           <div class="col-sm-4">
             <button type="submit" class="btn btn-default">Submit</button>
           </div>
         </div>
-
-
-
-
 
       </form>
     </div> <!-- end of container-->
