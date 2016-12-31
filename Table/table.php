@@ -27,6 +27,7 @@
 
       <table class="table table-hover">
 
+        <!-- label for TABLE -->
         <thead>
           <tr>
             <th>ID</th>
@@ -57,6 +58,7 @@
               $population = $run['Population'];
            ?>
 
+           <!-- items -->
            <tr>
              <td><?php echo "$id";?></td>
              <td><?php echo "$name";?></td>
@@ -65,16 +67,10 @@
              <td><?php echo "$population";?></td>
            </tr>
 
-
            <?php } ?>
-
 
     </tbody>
   </table>
-</div>
-
-
-
 
     </div> <!-- end of container-->
 
