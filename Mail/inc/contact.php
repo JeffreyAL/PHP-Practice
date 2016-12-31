@@ -38,8 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    //echo "email was sent";
 
    //add the data into the database id, name, email, message
-   $SQL = "INSERT INTO email (id, name, email, message)
-    VALUES ('', '$name', '$email', '$message');";
+   $SQL = "INSERT INTO email VALUES (NULL, '$name', '$email', '$message')";
 
 
    if(mysqli_query($connect, $SQL)){
