@@ -21,11 +21,11 @@
 
       <div class="col-md-12">
         <div class="page-header text-center">
-          <h1>Table</h1>
+          <h1>Table: City</h1>
         </div>
       </div>
 
-      <table class="table table-condensed">
+      <table class="table table-hover">
 
         <thead>
           <tr>
@@ -42,7 +42,7 @@
           <?php
 
             $sql = "SELECT ID, Name, CountryCode, District,
-            Population FROM city ORDER BY ID DESC";
+            Population FROM city ORDER BY ID ASC";
 
             $data = mysqli_query($connect, $sql);
 
