@@ -35,10 +35,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  if($status == true)
  {
    //mail($emailTo, $subject, $message, "From: " . $name);
-   echo "email was sent";
+   //echo "email was sent";
+
+   //add the data into the database id, name, email, message
+   $SQL = "INSERT INTO email (id, name, email, message)
+    VALUES ('', '$name', '$email', '$message');";
+
+
+   if(mysqli_query($connect, $SQL)){
+     echo "Upload to database successful";
+   } else {
+     echo "failed";
+   }
+
+
+ mysqli_close($connect); // close the database
  }
 
-}
+} // end of server method-post
 
 //check for unwanted data/text
 function test_input($data){

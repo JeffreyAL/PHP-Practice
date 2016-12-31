@@ -1,3 +1,4 @@
+<!-- php code for database-->
 <?php include 'inc/connect.php'; ?>
 <!DOCTYPE html>
 <html>
@@ -19,14 +20,14 @@
     <div class="container">
 
       <div class="col-md-12">
-        <div class="page-header">
+        <div class="page-header text-center">
           <h1>Contact Form</h1>
         </div>
       </div>
 
 
       <form class="form-horizontal" method="post" role="form">
-        <?php include 'inc/function.php'; ?>
+        <?php include 'inc/contact.php'; ?>
         <!-- Name -->
         <div class="form-group">
           <label class="control-label col-sm-2" for="name">Name:</label>

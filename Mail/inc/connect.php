@@ -3,9 +3,10 @@
 $serverName = "localhost";
 $userName = "root";
 $passWord = ""; //no passwrod
+$dataBase = "mail";
 
 //Create connection
-$connect = new mysqli($serverName, $userName, $passWord);
+$connect = new mysqli($serverName, $userName, $passWord, $dataBase);
 
 //Check connection
 if($connect->connect_error)
