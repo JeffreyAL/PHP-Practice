@@ -67,7 +67,7 @@
              <td><?php echo "$population";?></td>
            </tr>
 
-           <?php } ?>
+           <?php } ?> <!-- end of php -->
 
     </tbody>
   </table>
