@@ -1,10 +1,11 @@
 <?php
-// action when delete
+
 $url = "";
 if(isset($_GET['url']))
 {
   $url = $_GET['url'];
 
+  // action when delete
   if($url == 'delete')
   {
     $id = $_GET['id'];
@@ -18,7 +19,7 @@ if(isset($_GET['url']))
     }
   }
 
-
+  // action when edit
   if($url == 'edit')
   {
     // store id from url-page
@@ -36,7 +37,7 @@ if(isset($_GET['url']))
 
   <div class="col-md-12">
     <h3>Edit form</h3>
-    <form class="form-inline">
+    <form class="form-inline" method="post">
 
 
 
@@ -66,7 +67,8 @@ if(isset($_GET['url']))
       </div>
 
 
-        <a href="table.php" class="btn btn-info" role="button">Update </a>
+        <a href="table.php" class="btn btn-danger" role="button">Cancel</a>
+        <button type="submit" class="btn btn-info">Update</button>
 
 
     </form>

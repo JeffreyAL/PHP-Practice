@@ -80,6 +80,8 @@
 
            <?php include 'actions.php'; ?>
 
+           <?php include 'update.php'; ?>
+
 
 
     </tbody>
