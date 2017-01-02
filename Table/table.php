@@ -25,6 +25,8 @@
         </div>
       </div>
 
+
+
       <table class="table table-hover">
 
         <!-- label for TABLE -->
@@ -69,14 +71,16 @@
              <td><?php echo "$district";?></td>
              <td><?php echo "$population";?></td>
              <td>
-               <a href="table.php" class="btn btn-warning" role="button">Edit </a>
+               <a href="table.php?url=edit&id=<?php echo "$id";?>" class="btn btn-warning" role="button">Edit </a>
                <a href="table.php?url=delete&id=<?php echo "$id";?>" class="btn btn-danger" role="button">Delete</a>
              </td>
            </tr>
 
            <?php } ?> <!-- end of php -->
 
-           <?php include 'delete.php'; ?>
+           <?php include 'actions.php'; ?>
+
+
 
     </tbody>
   </table>
