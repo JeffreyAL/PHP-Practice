@@ -21,7 +21,7 @@
 
       <div class="col-md-12">
         <div class="page-header text-center">
-          <h1>Table: City</h1>
+          <h1>Table: City List</h1>
         </div>
       </div>
 
@@ -35,6 +35,7 @@
             <th>CountryCode</th>
             <th>District</th>
             <th>Population</th>
+            <th>Actions</th>
           </tr>
         </thead>
 
@@ -56,6 +57,8 @@
               $cc = $run['CountryCode'];
               $district = $run['District'];
               $population = $run['Population'];
+
+
            ?>
 
            <!-- items -->
@@ -65,9 +68,15 @@
              <td><?php echo "$cc";?></td>
              <td><?php echo "$district";?></td>
              <td><?php echo "$population";?></td>
+             <td>
+               <a href="table.php" class="btn btn-warning" role="button">Edit </a>
+               <a href="table.php?url=delete&id=<?php echo "$id";?>" class="btn btn-danger" role="button">Delete</a>
+             </td>
            </tr>
 
            <?php } ?> <!-- end of php -->
+
+           <?php include 'delete.php'; ?>
 
     </tbody>
   </table>
