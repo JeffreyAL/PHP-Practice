@@ -9,13 +9,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $district = $_POST['district'];
   $population = $_POST['population'];
 
-  // update the data on the database
+  // elect values that are going to be updated
   $sql = "UPDATE city SET ID = '$id', Name = '$name', CountryCode = '$cc',
   District = '$district', Population = '$population' WHERE ID=$id ";
-  // run the update on the database
+
+  // run the query on the database
   if(mysqli_query($connect, $sql)){
     echo "Update was successful";
     echo "<a href='table.php'> Click me to complete update</a>";
+
   } else {
     echo "fail to Update";
   }
