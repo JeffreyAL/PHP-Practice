@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="Test">
+      <h1>XMLHttpRequest</h1>
+      <button type="button" onclick="loadFile()"> change content</button>
+
+    </div>
+  </body>
+</html>
+
+<script>
+  function loadFile(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+      if (this.readyState == 4 && this.status == 200){
+        document.getElementById("Test").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "test.txt", true);
+    xhttp.send();
+  }
+</script>
